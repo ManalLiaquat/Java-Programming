@@ -1,4 +1,4 @@
-/* Marksheet APP */
+// Marksheet APP
 alert("Find your Result / Grade!");
 var n = +prompt("Hom many subjects?");
 var i, obt = 0, tot = n * 100, prc;
