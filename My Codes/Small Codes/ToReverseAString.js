@@ -1,4 +1,4 @@
-
+//
 function reverseString(str) {
     var strSplit = str.split("");
     var strRev = strSplit.reverse();

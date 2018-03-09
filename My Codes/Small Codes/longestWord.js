@@ -1,4 +1,4 @@
-
+//
 function findLongestWord(str) {
     var wordsArray = str.split(' ');
     var maxLength = 0;

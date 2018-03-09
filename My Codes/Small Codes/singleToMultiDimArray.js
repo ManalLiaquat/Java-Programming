@@ -1,4 +1,4 @@
-
+//
 function chunkArrayInGroups(arr, size) {
 
     var temp = [];

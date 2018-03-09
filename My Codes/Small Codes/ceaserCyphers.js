@@ -1,4 +1,4 @@
-
+//
 function rot13(str) {
     // Split str into a character array
     return str.split('')

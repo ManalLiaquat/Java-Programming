@@ -1,3 +1,4 @@
+//
 function getNumber(num) {
     var manal = document.getElementById('input');
     switch (num) {
