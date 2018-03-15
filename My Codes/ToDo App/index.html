@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>ToDo App</title>
+</head>
+
+<body>
+    <center>
+        <!-- Start of todo app -->
+        <h2>TO DO APP
+            <i class="fas fa-clipboard"></i>
+        </h2>
+
+        <div>
+            <input type="text" size="50" name="" id="val" placeholder="Enter something..." onblur="this.style.borderColor = 'white'"
+                onfocus="this.style.borderColor = 'yellow'">
+            <button onclick="add();" id="btn1">
+                <i class="fas fa-plus-square"></i> ADD</button>
+            <button onclick="deleteAll();" id="btn2">
+                <i class="fas fa-trash-alt"></i> DELETE ALL</button>
+            <br>
+            <div id="incomplete">
+                <h3>InComplete Tasks
+                    <i class="fas fa-clipboard-list"></i>
+                </h3>
+                <hr width="50%">
+                <ul id="incompleteList">
+
+                </ul>
+            </div>
+            <div id="completed">
+                <h3>Completed Tasks
+                    <i class="fas fa-clipboard-check"></i>
+                </h3>
+                <hr width="50%">
+                <ul id="completedlist">
+
+                </ul>
+            </div>
+        </div>
+        <!-- End of Todo App  -->
+        <!-- Start of Clock -->
+        <br>
+        <br>
+        <div id="time"></div>
+        <!-- End of clock -->
+    </center>
+</body>
+<script src="js/todo.js"></script>
+
+</html>
