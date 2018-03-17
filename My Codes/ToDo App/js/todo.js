@@ -1,49 +1,76 @@
 //To Do App
 function add() {
     var input = document.getElementById("val");
-    var incompleteList = document.getElementById("incompleteList");
+    var text = document.createTextNode(input.value);
     var li = document.createElement("LI");
+
     var btn = document.createElement("BUTTON");
+    btn.setAttribute("class", "btn btn-danger col-xs-2");
     var btnText = document.createTextNode("Delete");
+    btn.appendChild(btnText);
+
+    var btn1 = document.createElement("BUTTON");
+    btn1.setAttribute("class", "btn btn-info col-xs-2");
+    var btn1Text = document.createTextNode("Edit");
+    btn1.appendChild(btn1Text);
+    
     var checkbox = document.createElement("INPUT");
-    checkbox.setAttribute("type", "checkbox");
+    checkbox.setAttribute("type","checkbox");
+    checkbox.className ="col-sm-2";
+
+    var incompleteList = document.getElementById("incompleteList");
     var completedList = document.getElementById("completedlist");
 
+    text.className="col-xs-6";
+    
+   
+
+
+
+
+    
     if (input.value === "") {
         alert("You should enter something!")
     }
     else {
-        var text = document.createTextNode(input.value);
         li.appendChild(checkbox);
         li.appendChild(text);
         li.appendChild(btn);
+        li.appendChild(btn1);
         incompleteList.appendChild(li);
         input.value = "";
 
         checkbox.onclick = function () {
             li.removeChild(checkbox);
+            li.removeChild(btn1);
             completedList.appendChild(li);
             incompleteList.removeChild(li)
+            
         }
 
-        btn.appendChild(btnText);
+        
         btn.onclick = function () {
             var li = this.parentNode;
             var ul = li.parentNode;
             ul.removeChild(li);
         }
 
-        //Start of styling btn
-        btn.style.backgroundColor = "#b71c1c";
-        btn.style.color = "white";
-        btn.style.margin = "10px 10px 10px 20px"
-        btn.onmouseover = function () {
-            this.style.backgroundColor = "#7f0000"
+        
+        btn1.onclick = function () {
+            var li = this.parentNode;
+            var text = prompt("Enter updated value");
+            li.innerHTML = text;
+            li.appendChild(checkbox);
+            li.appendChild(btn);
+            li.appendChild(btn1);
         }
-        btn.onmouseout = function () {
-            this.style.backgroundColor = "#b71c1c"
-        }
-        //End of btn stying
+
+
+        //Start of styling
+        btn.style.margin = "10px 10px 10px 20px";
+        
+        //End of stying
+
 
     }
 
