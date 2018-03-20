@@ -1,4 +1,4 @@
-# JAVA-PROGRAMMING LIVE PREVIEWS LINKS
+# MY JAVASCRIPT ASSIGNMENTS LIVE PREVIEW LINKS
 
 // My JS Calculator
 https://manal-liaquat.firebaseapp.com/Git%20Projects/Java-Programming/My%20Codes/Calculator/index.html
